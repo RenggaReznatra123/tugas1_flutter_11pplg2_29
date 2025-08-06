@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'input_field.dart';
+import 'package:latihan2_11pplg2/reusable/custom_textfield.dart';
+import 'package:latihan2_11pplg2/reusable/custom_button.dart';
+import 'package:latihan2_11pplg2/reusable/custom_text.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -25,12 +27,22 @@ class _RegisterPageState extends State<RegisterPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            InputField(label: "Nama", controller: nameController),
-            InputField(label: "Email / Username", controller: emailController),
-            InputField(
-              label: "Password",
+            CustomTextField(
+              myText: "Nama Lengkap",
+              controller: nameController,
+              textColor: Colors.blue,
+              isNumber: false,
+            ),
+            CustomTextField(
+              myText: "Email",
+              controller: emailController,
+              isNumber: false,
+            ),
+            CustomTextField(
+              myText: "Password",
               controller: passwordController,
-              obscure: true,
+              obscureText: true,
+              isNumber: false,
             ),
 
             const SizedBox(height: 10),

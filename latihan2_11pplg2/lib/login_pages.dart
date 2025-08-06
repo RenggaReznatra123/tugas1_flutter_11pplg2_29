@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:latihan2_11pplg2/reusable/custom_button.dart';
 import 'register_page.dart';
 
 class LoginPages extends StatefulWidget {
@@ -9,7 +10,6 @@ class LoginPages extends StatefulWidget {
 }
 
 class _LoginPagesState extends State<LoginPages> {
-  // Controller untuk username dan password
   TextEditingController usernameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
@@ -84,9 +84,10 @@ class _LoginPagesState extends State<LoginPages> {
                 ),
               ),
             ),
-            // Tombol Register
+
             Center(
-              child: TextButton(
+              child: CustomButton(
+                myText: "Belum punya akun? Daftar di sini",
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -95,9 +96,10 @@ class _LoginPagesState extends State<LoginPages> {
                     ),
                   );
                 },
-                child: Text("Belum punya akun? Daftar di sini"),
+                textColor: const Color.fromARGB(255, 255, 255, 255),
               ),
             ),
+
             Text(statuslogin),
           ],
         ),
