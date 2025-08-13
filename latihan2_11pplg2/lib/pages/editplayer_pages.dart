@@ -1,0 +1,59 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import '../controller/edit_player_controller.dart';
+import '../model/football_player_model.dart';
+import '../reusable/custom_textfield.dart';
+import '../reusable/custom_button.dart';
+
+class EditPlayerPages extends StatelessWidget {
+  final FootballPlayer player;
+  final int index;
+
+  EditPlayerPages({required this.player, required this.index}) {
+    final controller = Get.put(EditPlayerController());
+    controller.setPlayer(player, index);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final controller = Get.find<EditPlayerController>();
+
+    return Scaffold(
+      appBar: AppBar(title: const Text("Edit Player")),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            SizedBox(
+              height: 120,
+              width: 120,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: Image(image: player.image, fit: BoxFit.contain),
+              ),
+            ),
+            const SizedBox(height: 16),
+            CustomTextField(
+              myText: "Nama Pemain",
+              controller: controller.nameController,
+              isNumber: false,
+            ),
+            CustomTextField(
+              myText: "Nomor Punggung",
+              controller: controller.numberController,
+              isNumber: true,
+            ),
+            CustomTextField(
+              myText: "Posisi",
+              controller: controller.positionController,
+              isNumber: false,
+            ),
+            const SizedBox(height: 20),
+            // pakai CustomButton kamu
+            CustomButton(myText: "Simpan", onPressed: controller.saveChanges),
+          ],
+        ),
+      ),
+    );
+  }
+}

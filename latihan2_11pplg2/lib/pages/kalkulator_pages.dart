@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:latihan2_11pplg2/controler/kalkulator.dart';
+import 'package:latihan2_11pplg2/controller/kalkulator.dart';
 import 'package:latihan2_11pplg2/reusable/custom_textfield.dart';
 import 'package:latihan2_11pplg2/reusable/custom_button.dart';
+import 'package:latihan2_11pplg2/routes/routes.dart';
 
 class KalkulatorPage extends StatelessWidget {
   final CalculatorController calculatorController = Get.put(
@@ -88,6 +89,13 @@ class KalkulatorPage extends StatelessWidget {
               onPressed: calculatorController.clear,
               textColor: Colors.white,
               backgroundColor: Colors.redAccent,
+            ),
+            const SizedBox(height: 20),
+            CustomButton(
+              myText: "pemain bola besito",
+              onPressed: () {
+                Get.toNamed(AppRoutes.footballPages);
+              },
             ),
           ],
         ),
