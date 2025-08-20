@@ -5,12 +5,12 @@ import 'package:latihan2_11pplg2/reusable/custom_textfield.dart';
 import 'package:latihan2_11pplg2/reusable/custom_button.dart';
 import 'package:latihan2_11pplg2/routes/routes.dart';
 
-class KalkulatorPage extends StatelessWidget {
+class KalkulatorPages extends StatelessWidget {
   final CalculatorController calculatorController = Get.put(
     CalculatorController(),
   );
 
-  KalkulatorPage({super.key});
+  KalkulatorPages({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -91,12 +91,6 @@ class KalkulatorPage extends StatelessWidget {
               backgroundColor: Colors.redAccent,
             ),
             const SizedBox(height: 20),
-            CustomButton(
-              myText: "pemain bola besito",
-              onPressed: () {
-                Get.toNamed(AppRoutes.footballPages);
-              },
-            ),
           ],
         ),
       ),
