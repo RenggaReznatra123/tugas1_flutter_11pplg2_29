@@ -1,21 +1,15 @@
 import 'package:get/get.dart';
-import 'package:latihan2_11pplg2/pages/main_page.dart';
-import 'package:latihan2_11pplg2/pages/football_pages.dart';
+import 'package:latihan2_11pplg2/pages/mainmenu_page.dart';
 import 'package:latihan2_11pplg2/pages/kalkulator_pages.dart';
+import 'package:latihan2_11pplg2/pages/football_pages.dart';
 import 'package:latihan2_11pplg2/pages/editplayer_pages.dart';
-import 'package:latihan2_11pplg2/routes/routes.dart';
+import 'routes.dart';
 
 class AppPages {
   static final pages = [
-    GetPage(name: AppRoutes.mainPage, page: () => MainPage()),
+    GetPage(name: AppRoutes.mainMenuPage, page: () => MainmenuPage()),
     GetPage(name: AppRoutes.calculatorPage, page: () => KalkulatorPages()),
     GetPage(name: AppRoutes.footballPages, page: () => FootballPages()),
-    GetPage(
-      name: AppRoutes.editPlayerPages,
-      page: () {
-        final args = Get.arguments as Map<String, dynamic>;
-        return EditPlayerPages(player: args['player'], index: args['index']);
-      },
-    ),
+    GetPage(name: AppRoutes.editPlayerPages, page: () => EditPlayerPages()),
   ];
 }

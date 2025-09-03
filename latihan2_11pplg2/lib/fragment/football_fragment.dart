@@ -3,16 +3,15 @@ import 'package:get/get.dart';
 import '../controller/football_player_controller.dart';
 import '../routes/routes.dart';
 
-class FootballPages extends StatelessWidget {
-  FootballPages({super.key});
+class FootballFragment extends StatelessWidget {
+  FootballFragment({super.key});
 
   final footballPlayerController = Get.put(FootballPlayerController());
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Besito Team Player")),
-      body: Obx(
+    return Container(
+      child: Obx(
         () => ListView.builder(
           itemCount: footballPlayerController.players.length,
           itemBuilder: (context, index) {

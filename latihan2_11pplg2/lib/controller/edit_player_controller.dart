@@ -4,34 +4,43 @@ import '../model/football_player_model.dart';
 import 'football_player_controller.dart';
 
 class EditPlayerController extends GetxController {
-  final nameController = TextEditingController();
-  final numberController = TextEditingController();
-  final positionController = TextEditingController();
+  final name = TextEditingController();
+  final number = TextEditingController();
+  final position = TextEditingController();
 
-  late int playerIndex;
-  late FootballPlayer originalPlayer;
+  late int index;
+  final playerController = Get.find<FootballPlayerController>();
 
-  void setPlayer(FootballPlayer player, int index) {
-    originalPlayer = player;
-    playerIndex = index;
+  @override
+  void onInit() {
+    super.onInit();
+    final args = Get.arguments as Map<String, dynamic>;
+    index = args['index'] as int;
 
-    nameController.text = player.name;
-    numberController.text = player.number;
-    positionController.text = player.position;
+    final player = playerController.players[index];
+    name.text = player.name;
+    number.text = player.number;
+    position.text = player.position;
   }
 
-  void saveChanges() {
-    final updatedPlayer = FootballPlayer(
-      name: nameController.text,
-      number: numberController.text,
-      position: positionController.text,
-      image: originalPlayer.image,
-    );
-
-    Get.find<FootballPlayerController>().updatePlayer(
-      playerIndex,
-      updatedPlayer,
+  void save() {
+    playerController.updatePlayer(
+      index,
+      FootballPlayer(
+        name: name.text,
+        number: number.text,
+        position: position.text,
+        image: playerController.players[index].image,
+      ),
     );
     Get.back();
+  }
+
+  @override
+  void onClose() {
+    name.dispose();
+    number.dispose();
+    position.dispose();
+    super.onClose();
   }
 }
