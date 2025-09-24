@@ -14,8 +14,7 @@ class EditPlayerController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    final args = Get.arguments as Map<String, dynamic>;
-    index = args['index'] as int;
+    index = Get.arguments as int;
 
     final player = playerController.players[index];
     name.text = player.name;

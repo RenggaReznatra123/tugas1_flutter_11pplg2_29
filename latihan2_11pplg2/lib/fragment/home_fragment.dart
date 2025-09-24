@@ -6,9 +6,11 @@ import 'package:latihan2_11pplg2/reusable/custom_button.dart';
 import 'package:latihan2_11pplg2/routes/routes.dart';
 
 class HomeFragment extends StatelessWidget {
-  final CalculatorController calculatorController = Get.put(
-    CalculatorController(),
-  );
+  // final CalculatorController calculatorController = Get.put(
+  //   CalculatorController(),
+  // );
+
+  final calculatorController = Get.find<CalculatorController>();
 
   HomeFragment({super.key});
   @override

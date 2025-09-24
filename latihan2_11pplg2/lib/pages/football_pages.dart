@@ -22,10 +22,7 @@ class FootballPages extends StatelessWidget {
               title: Text(player.name),
               subtitle: Text('${player.position} • #${player.number}'),
               onTap: () {
-                Get.toNamed(
-                  AppRoutes.editPlayerPages,
-                  arguments: {'index': index},
-                );
+                Get.toNamed(AppRoutes.editPlayerPages, arguments: index);
               },
             );
           },

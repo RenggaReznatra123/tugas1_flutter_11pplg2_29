@@ -17,7 +17,6 @@ class EditPlayerPages extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            // Tampilkan foto pemain dari controller
             SizedBox(
               height: 120,
               width: 120,
