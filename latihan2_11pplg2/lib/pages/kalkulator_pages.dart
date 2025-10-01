@@ -6,10 +6,8 @@ import 'package:latihan2_11pplg2/reusable/custom_button.dart';
 import 'package:latihan2_11pplg2/routes/routes.dart';
 
 class KalkulatorPages extends StatelessWidget {
-  final CalculatorController calculatorController = Get.put(
-    CalculatorController(),
-  );
-
+  final CalculatorController calculatorController =
+      Get.find<CalculatorController>();
   KalkulatorPages({super.key});
 
   @override

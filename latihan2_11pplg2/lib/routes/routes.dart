@@ -5,4 +5,5 @@ class AppRoutes {
   static const String editPlayerPages = "/EditPlayerPages";
   static const String loginpages = "/LoginPages";
   static const String splashpages = "/SplashPages";
+  static const String contactPages = "/ContactPages";
 }
