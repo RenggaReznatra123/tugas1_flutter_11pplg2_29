@@ -4,6 +4,10 @@ import '../model/football_player_model.dart';
 
 class FootballPlayerController extends GetxController {
   var players = <FootballPlayer>[].obs;
+  var isMobile = true.obs;
+  void updateLayout(BoxConstraints constraints) {
+    isMobile.value = constraints.maxWidth < 600;
+  }
 
   @override
   void onInit() {

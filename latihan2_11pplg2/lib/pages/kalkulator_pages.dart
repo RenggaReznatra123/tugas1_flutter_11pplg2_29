@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:latihan2_11pplg2/controller/kalkulator.dart';
 import 'package:latihan2_11pplg2/reusable/custom_textfield.dart';
 import 'package:latihan2_11pplg2/reusable/custom_button.dart';
-import 'package:latihan2_11pplg2/routes/routes.dart';
 
 class KalkulatorPages extends StatelessWidget {
   final CalculatorController calculatorController =

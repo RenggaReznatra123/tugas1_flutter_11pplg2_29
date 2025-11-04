@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:latihan2_11pplg2/controller/mainmenu_controler.dart';
-import 'package:latihan2_11pplg2/pages/kalkulator_pages.dart';
-import 'package:latihan2_11pplg2/pages/football_pages.dart';
-import 'package:latihan2_11pplg2/pages/profile_page.dart';
 
 class MainmenuPage extends StatelessWidget {
   MainmenuPage({super.key});
 
-  MainmenuController mainmenuController = Get.find<MainmenuController>();
+  final MainmenuController mainmenuController = Get.put(MainmenuController());
 
   @override
   Widget build(BuildContext context) {

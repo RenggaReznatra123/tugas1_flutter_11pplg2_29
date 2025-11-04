@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:latihan2_11pplg2/reusable/custom_textfield.dart';
-import 'package:latihan2_11pplg2/reusable/custom_button.dart';
-import 'package:latihan2_11pplg2/reusable/custom_text.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});

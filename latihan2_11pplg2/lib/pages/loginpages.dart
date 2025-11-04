@@ -7,7 +7,7 @@ import 'package:latihan2_11pplg2/reusable/custom_textfield.dart';
 class LoginPages extends StatelessWidget {
   LoginPages({super.key});
 
-  final LoginController loginController = Get.find<LoginController>();
+  final loginController = Get.find<LoginController>();
 
   @override
   Widget build(BuildContext context) {

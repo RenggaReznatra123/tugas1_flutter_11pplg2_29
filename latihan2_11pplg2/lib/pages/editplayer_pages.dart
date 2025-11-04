@@ -9,7 +9,7 @@ class EditPlayerPages extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.find<EditPlayerController>();
+    final controller = Get.put(EditPlayerController());
 
     return Scaffold(
       appBar: AppBar(title: const Text("Edit Player")),

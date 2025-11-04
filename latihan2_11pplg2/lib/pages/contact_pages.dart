@@ -22,7 +22,7 @@ class ContactPage extends StatelessWidget {
                     controller: contactController.nameController,
                     decoration: const InputDecoration(labelText: 'Name'),
                   ),
-                ),
+                ),  
                 const SizedBox(width: 10),
                 ElevatedButton(
                   onPressed: contactController.addName,
