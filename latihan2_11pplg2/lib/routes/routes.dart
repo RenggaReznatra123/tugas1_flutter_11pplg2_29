@@ -10,4 +10,5 @@ class AppRoutes {
   static const String loginAPIpages = "/LoginAPIPages";
   static const String homePage = "/HomePage";
   static const String profileFragment = "/ProfileFragment";
+  static const String tablePremierePages = "/TablePremierePages";
 }

@@ -34,10 +34,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      initialRoute: AppRoutes.homePage,
-      getPages: AppPages.pages,
-      // initialRoute: AppRoutes.splashpages,
+      // initialRoute: AppRoutes.tablePremierePages,
       // getPages: AppPages.pages,
+      initialRoute: AppRoutes.splashpages,
+      getPages: AppPages.pages,
     );
   }
 }

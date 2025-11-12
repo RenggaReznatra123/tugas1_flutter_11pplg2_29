@@ -41,6 +41,8 @@
     http: ^1.5.0
     firebase_core: ^3.6.0
     firebase_messaging: ^15.0.4
+    firebase_auth: ^5.3.0
+    google_sign_in: ^6.2.1
 
 
   dev_dependencies:
@@ -73,6 +75,7 @@
       - assets/mesii.jpg
       - assets/nema.jpg
       - assets/ronaldo.jpg
+      - assets/google_logo.png
     
 
     # An image asset can refer to one or more resolution-specific "variants", see

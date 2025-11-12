@@ -1,13 +1,16 @@
 import 'package:get/get.dart';
+import 'package:latihan2_11pplg2/bindings/TablePremiere_binding.dart';
 import 'package:latihan2_11pplg2/bindings/calculatorbinding.dart';
 import 'package:latihan2_11pplg2/bindings/contact_binding.dart';
 import 'package:latihan2_11pplg2/bindings/example_binding.dart';
 import 'package:latihan2_11pplg2/bindings/loginbinding.dart';
 import 'package:latihan2_11pplg2/bindings/mainmenubinding.dart';
+import 'package:latihan2_11pplg2/bindings/profilebinding.dart';
 import 'package:latihan2_11pplg2/bindings/splashBinding.dart';
 import 'package:latihan2_11pplg2/bindings/LoginAPIBinding.dart';
 import 'package:latihan2_11pplg2/controller/edit_player_controller.dart';
 import 'package:latihan2_11pplg2/controller/football_player_controller.dart';
+import 'package:latihan2_11pplg2/pages/TablePremiere_pages.dart';
 import 'package:latihan2_11pplg2/pages/contact_pages.dart';
 import 'package:latihan2_11pplg2/pages/editplayer_pages.dart';
 import 'package:latihan2_11pplg2/pages/example/example_transform.dart';
@@ -75,7 +78,13 @@ class AppPages {
     GetPage(
       name: AppRoutes.profileFragment,
       page: () => const ProfileFragment(),
+      binding: ProfileBinding(),
     ),
     GetPage(name: AppRoutes.homePage, page: () => HomePage()),
+    GetPage(
+      name: AppRoutes.tablePremierePages,
+      page: () => const TablepremierePages(),
+      binding: TablepremiereBinding(),
+    ),
   ];
 }
